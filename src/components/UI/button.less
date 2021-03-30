@@ -1,0 +1,36 @@
+@yellow: #ffc80A;
+
+.box(@color) {
+    display: grid;
+    box-sizing: border-box;
+    background-color: @color;
+}
+
+.btnTeamplayte() {
+    padding: 15px 30px;
+    border-radius: 30px;
+    &:focus {
+        outline: none;
+    }
+    &::after {
+        content: '';
+    }
+}
+
+.outlined {
+    border: 3px solid @yellow;
+    box-sizing: border-box;
+    .btnTeamplayte();
+}
+.filled {
+    border: 3px solid @yellow;
+    box-sizing: border-box;
+    background-color: @yellow;
+    .btnTeamplayte();
+}
+.gray {
+    border: 3px solid gray;
+    box-sizing: border-box;
+    background-color: white;
+    .btnTeamplayte();
+}
