@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useContext, useContext} from 'react';
 import Input from './../UI/Input';
 import './Footer.less';
+import Store from './../../context'
 
 const Footer = () => {
+    const currentTheme = useContext(Store)
     const arrData = [
         {tittle: 'product', support: 'Support Developers', customer: 'Customer Service', guide: 'Ger Started Guide'},
         {tittle: 'company', support: 'Support Developers', customer: 'Customer Service', guide: 'Ger Started Guide'},
@@ -22,7 +24,7 @@ const Footer = () => {
                 ))}
                 <div>
                     <h6>SUBSCRIBE TO NEWSLETTERS</h6>
-                    <Input style={'outlined'} nameContainer={'outlinedContainer'}/>
+                    <Input style={currentTheme} className={`${currentTheme}Container`}/>
                 </div>   
             </div>
             <div className={'footerCorporation'}>

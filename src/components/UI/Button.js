@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './button.less';
+import Store from './../../context';
 
-const Button = ({type, text}) => {
-
+const Button = ({text}) => {
+    const currentTheme = useContext(Store)
     return (
-        <button className={type}>{text}</button>
+        <button className={currentTheme}>{text}</button>
     );
 };
-
 
 export default Button;

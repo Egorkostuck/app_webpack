@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import logo from './../../img/Landing.png';
 import shape from './../../img/Shape.svg';
 import './Header.less';
 import Nav from './../Nav/Nav.js';
+import Store from './../../context';
 
 const Header = ({headerContainer}) => {
+    const currentTheme = useContext(Store);
     return (
         <section className={headerContainer}>
             <div>
